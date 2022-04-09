@@ -4,6 +4,7 @@ import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.junit.rules.ExpectedException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,19 +31,8 @@ public class FilePage {
     public WebElement actionIcon;
 
     public void clickSubModule(String subModuleName){
-        /*
-        BrowserUtils.sleep(3);
-        WebElement el= Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']"));
-        WebDriverWait wait=new WebDriverWait(Driver.getDriver(),5);
-        wait.until(ExpectedException)
-        el.click();
-
-         */
-
-        String locateSubModule="//a[.='"+subModuleName+"']";
-
-        BrowserUtils.sleep(2);
-        Driver.getDriver().findElement(By.xpath(locateSubModule)).click();
+        BrowserUtils.sleep(7);
+            Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']")).click();
 
 
     }

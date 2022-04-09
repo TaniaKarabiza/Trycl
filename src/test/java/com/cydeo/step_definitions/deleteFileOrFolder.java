@@ -46,7 +46,7 @@ public class deleteFileOrFolder {
     public void user_choose_the_option(String string) {
        // BrowserUtils.sleep(4);
     filePage.option(string);
-        System.out.println(textOfFile);
+       // System.out.println(textOfFile);
     }
     @When("the user clicks the {string} sub-module on the left side")
     public void the_user_clicks_the_sub_module_on_the_left_side(String string) {

@@ -50,7 +50,7 @@ public class deleteFileOrFolder {
     }
     @When("the user clicks the {string} sub-module on the left side")
     public void the_user_clicks_the_sub_module_on_the_left_side(String string) {
-      //  BrowserUtils.sleep(4);
+    BrowserUtils.sleep(4);
     filePage.clickSubModule(string);
 
 

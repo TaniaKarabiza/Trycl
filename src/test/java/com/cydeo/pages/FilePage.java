@@ -1,10 +1,15 @@
 package com.cydeo.pages;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
+import org.junit.rules.ExpectedException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FilePage {
     public FilePage(){
@@ -25,7 +30,21 @@ public class FilePage {
     public WebElement actionIcon;
 
     public void clickSubModule(String subModuleName){
-        Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']")).click();
+        /*
+        BrowserUtils.sleep(3);
+        WebElement el= Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']"));
+        WebDriverWait wait=new WebDriverWait(Driver.getDriver(),5);
+        wait.until(ExpectedException)
+        el.click();
+
+         */
+
+        String locateSubModule="//a[.='"+subModuleName+"']";
+
+        BrowserUtils.sleep(2);
+        Driver.getDriver().findElement(By.xpath(locateSubModule)).click();
+
+
     }
 
 }

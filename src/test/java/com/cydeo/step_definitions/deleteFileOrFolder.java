@@ -20,6 +20,7 @@ public class deleteFileOrFolder {
     DeletedFilePage deletedFilePage=new DeletedFilePage();
     String textOfFile="";
 
+
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
     loginPage.login();
@@ -37,7 +38,7 @@ public class deleteFileOrFolder {
 
         textOfFile=filePage.fileName.getText();
         BrowserUtils.sleep(3);
-        filePage.fileName.click();
+        filePage.checkboxFromFile.click();
         BrowserUtils.sleep(4);
         filePage.actionIcon.click();
     }
@@ -60,10 +61,11 @@ public class deleteFileOrFolder {
          BrowserUtils.sleep(5);
         //Assert.assertTrue(deletedFilesPage.locatingAnyDeletedFile("Tasks").isDisplayed());
 
-        System.out.println(textOfFile);
-      // deletedFilePage.locatingAnyDeletedFile(textOfFile);
+        //System.out.println(textOfFile);
+       deletedFilePage.locatingAnyDeletedFile(textOfFile);
 
 
+       /*
         List<WebElement> eachText=deletedFilePage.eachDeleted;
         for (WebElement each : eachText) {
             if(each.getText().equals(textOfFile) ){
@@ -72,6 +74,8 @@ public class deleteFileOrFolder {
             }
         }
 
+
+        */
 
 
 

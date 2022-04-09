@@ -16,6 +16,9 @@ public class FilePage {
     }
 
     @FindBy(xpath = "(//label[contains (@for, 'select-files')])[1]")
+    public WebElement checkboxFromFile;
+
+    @FindBy(xpath = "(//span[@class='innernametext'])[1]")
     public WebElement fileName;
 
     @FindBy(xpath = "//span[@class='icon icon-more']")

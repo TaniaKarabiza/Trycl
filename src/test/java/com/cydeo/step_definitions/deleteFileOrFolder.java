@@ -58,7 +58,8 @@ public class deleteFileOrFolder {
         //Assert.assertTrue(deletedFilesPage.locatingAnyDeletedFile("Tasks").isDisplayed());
 
         System.out.println(textOfFile);
-       // deletedFilePage.locatingAnyDeletedFile(textOfFile);
+      // deletedFilePage.locatingAnyDeletedFile(textOfFile);
+
 
         List<WebElement> eachText=deletedFilePage.eachDeleted;
         for (WebElement each : eachText) {
@@ -67,6 +68,8 @@ public class deleteFileOrFolder {
 
             }
         }
+
+
 
 
 

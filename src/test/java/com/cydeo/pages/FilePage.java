@@ -31,9 +31,12 @@ public class FilePage {
     public WebElement actionIcon;
 
     public void clickSubModule(String subModuleName){
-        BrowserUtils.sleep(7);
-            Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']")).click();
 
+        BrowserUtils.sleep(7);
+           WebElement module= Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']"));
+
+           JavascriptExecutor js=(JavascriptExecutor) Driver.getDriver();
+           js.executeScript("arguments[0].click();", module);
 
     }
 

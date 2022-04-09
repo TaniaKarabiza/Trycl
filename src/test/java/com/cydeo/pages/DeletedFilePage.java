@@ -19,7 +19,7 @@ public class DeletedFilePage {
 
     public void locatingAnyDeletedFile(String fileName){
 
-        String locateFile="(//span[.='"+fileName+"'])";
+        String locateFile="((//span[.='"+fileName+"'])[1])";
         Assert.assertTrue( Driver.getDriver().findElement(By.xpath(locateFile)).isDisplayed());
 
 

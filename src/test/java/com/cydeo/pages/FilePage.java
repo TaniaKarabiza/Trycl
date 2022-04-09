@@ -15,7 +15,7 @@ public class FilePage {
         Driver.getDriver().findElement(By.xpath("(//span[.='"+string+"'])[1]")).click();
     }
 
-    @FindBy(xpath = "//label[contains (@for, 'select-files')]")
+    @FindBy(xpath = "(//label[contains (@for, 'select-files')])[1]")
     public WebElement fileName;
 
     @FindBy(xpath = "//span[@class='icon icon-more']")

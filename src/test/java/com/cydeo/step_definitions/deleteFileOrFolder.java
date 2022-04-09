@@ -43,18 +43,21 @@ public class deleteFileOrFolder {
     }
     @When("user choose the {string} option")
     public void user_choose_the_option(String string) {
-        BrowserUtils.sleep(4);
+       // BrowserUtils.sleep(4);
     filePage.option(string);
+        System.out.println(textOfFile);
     }
     @When("the user clicks the {string} sub-module on the left side")
     public void the_user_clicks_the_sub_module_on_the_left_side(String string) {
-        BrowserUtils.sleep(4);
+      //  BrowserUtils.sleep(4);
     filePage.clickSubModule(string);
+
+
     }
     @Then("Verify the deleted file is displayed on the page.")
     public void verify_the_deleted_file_is_displayed_on_the_page() {
 
-        BrowserUtils.sleep(5);
+         BrowserUtils.sleep(5);
         //Assert.assertTrue(deletedFilesPage.locatingAnyDeletedFile("Tasks").isDisplayed());
 
         System.out.println(textOfFile);

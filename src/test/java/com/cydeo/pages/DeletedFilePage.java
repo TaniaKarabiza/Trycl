@@ -14,7 +14,8 @@ public class DeletedFilePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[@class='innernametext']")
+   // @FindBy(xpath = "//span[@class='innernametext']")
+   @FindBy(xpath = "(//tbody[@id='fileList'])[12]")
     public List<WebElement> eachDeleted;
 
     public void locatingAnyDeletedFile(String fileName){

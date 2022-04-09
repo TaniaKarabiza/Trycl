@@ -1,6 +1,8 @@
 package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,4 +16,13 @@ public class DeletedFilePage {
 
     @FindBy(xpath = "//span[@class='innernametext']")
     public List<WebElement> eachDeleted;
+
+    public void locatingAnyDeletedFile(String fileName){
+
+        String locateFile="(//span[.='"+fileName+"'])";
+        Assert.assertTrue( Driver.getDriver().findElement(By.xpath(locateFile)).isDisplayed());
+
+
+
+    }
 }

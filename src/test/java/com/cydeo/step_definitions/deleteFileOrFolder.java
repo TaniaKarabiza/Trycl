@@ -54,10 +54,17 @@ public class deleteFileOrFolder {
     @Then("Verify the deleted file is displayed on the page.")
     public void verify_the_deleted_file_is_displayed_on_the_page() {
 
+        BrowserUtils.sleep(5);
+        //Assert.assertTrue(deletedFilesPage.locatingAnyDeletedFile("Tasks").isDisplayed());
+
+        System.out.println(textOfFile);
+        //deletedFilePage.locatingAnyDeletedFile(textOfFile);
         List<WebElement> eachText=deletedFilePage.eachDeleted;
         for (WebElement each : eachText) {
-            Assert.assertEquals(each.getText(),textOfFile);
+            if(each.getText().equals(textOfFile) ){
+                Assert.assertEquals(each.getText(), textOfFile);
 
+            }
         }
 
     }
